@@ -28,6 +28,7 @@ export default function Form({ onAddItems }) {
           </option>
         ))}
       </select>
+
       <input
         type="text"
         placeholder="What do you need?"
