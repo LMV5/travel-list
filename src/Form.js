@@ -21,21 +21,23 @@ export default function Form({ onAddItems }) {
       <h3 className="add-form__heading">
         Things you need for your exciting trip
       </h3>
-      <select value={quantity} onChange={(e) => setQuantity(+e.target.value)}>
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-          <option value={num} key={num}>
-            {num}
-          </option>
-        ))}
-      </select>
+      <div className="input-fields">
+        <select value={quantity} onChange={(e) => setQuantity(+e.target.value)}>
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+            <option value={num} key={num}>
+              {num}
+            </option>
+          ))}
+        </select>
 
-      <input
-        type="text"
-        placeholder="What do you need?"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      ></input>
-      <button className="btn-add">Add</button>
+        <input
+          type="text"
+          placeholder="What do you need?"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></input>
+        <button className="btn-add">Add</button>
+      </div>
     </form>
   );
 }

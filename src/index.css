@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -12,8 +12,8 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: "Dancing Script", sans-serif;
-  color: #3b3b3b;
+  font-family: "Lato", sans-serif;
+  color: #181818;
   font-weight: 500;
   background-image: url(../img.jpg);
   background-position: center;
@@ -26,12 +26,12 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+  background-color: rgba(250, 237, 55, 0.6);
 }
 
 h1 {
   font-weight: 400;
   text-align: center;
-  background-color: rgba(221, 245, 174, 0.8);
   font-size: 6rem;
   text-transform: uppercase;
   word-spacing: 30px;
@@ -40,7 +40,6 @@ h1 {
 }
 
 .add-form {
-  background-color: rgba(172, 148, 146, 0.8);
   padding: 2.5rem 0;
   display: flex;
   align-items: center;
@@ -50,22 +49,22 @@ h1 {
 
 .add-form__heading {
   margin-right: 1.6rem;
-  font-size: 3.4rem;
+  font-size: 3rem;
 }
 
 button,
 select,
 input {
-  background-color: #f4a460;
-  color: #424141;
-  font-family: inherit;
+  background-color: #d6e5e3;
+  color: #181818;
   border: none;
   border-radius: 5rem;
   padding: 1rem 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   outline: none;
   font-size: 2rem;
+  margin-left: 1rem;
 }
 
 .btn-add {
@@ -83,7 +82,6 @@ input {
 
 .list {
   font-family: "Dancing Script", sans-serif;
-  background-color: rgba(138, 224, 216, 0.8);
   color: #3b3b3b;
   padding: 2rem 0;
   display: flex;
@@ -126,8 +124,104 @@ input[type="checkbox"] {
 }
 
 .stats {
-  background-color: rgba(127, 255, 212, 0.8);
   text-align: center;
   font-weight: 700;
   padding: 2rem 0;
+}
+
+@media (max-width: 1060px) {
+  h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    word-spacing: 20px;
+  }
+  .add-form {
+    flex-direction: column;
+  }
+  .add-form__heading {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    word-spacing: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    word-spacing: 20px;
+  }
+  .add-form__heading {
+    font-size: 2rem;
+  }
+  button,
+  select,
+  input {
+    background-color: rgba(214, 229, 227, 0.407);
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+  }
+  .actions button,
+  .list select {
+    padding: 0.5rem 1rem;
+  }
+  .stats {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .add-form__heading {
+    margin-left: 3.7rem;
+  }
+  button,
+  select,
+  input {
+    padding: 0.2rem 2rem;
+    font-weight: 200;
+    font-size: 1.6rem;
+  }
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .actions button,
+  .list select {
+    padding: 0.2rem 2rem;
+    font-weight: 200;
+  }
+}
+
+@media (max-width: 435px) {
+  .logo-icon {
+    display: none;
+  }
+  h1 {
+    font-size: 2.5rem;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+  }
+  button,
+  select,
+  input {
+    padding: 0.2rem 2rem;
+    font-weight: 200;
+    font-size: 1.6rem;
+  }
+  .input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .input-fields select {
+    width: 8rem;
+  }
 }
